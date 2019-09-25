@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		39BB9080233B4F5A0038705F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB907F233B4F5A0038705F /* AppDelegate.swift */; };
-		39BB9082233B4F5A0038705F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB9081233B4F5A0038705F /* SceneDelegate.swift */; };
-		39BB9084233B4F5A0038705F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB9083233B4F5A0038705F /* ViewController.swift */; };
+		39BB9084233B4F5A0038705F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB9083233B4F5A0038705F /* HomeViewController.swift */; };
 		39BB9087233B4F5A0038705F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BB9085233B4F5A0038705F /* Main.storyboard */; };
 		39BB9089233B4F5B0038705F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39BB9088233B4F5B0038705F /* Assets.xcassets */; };
 		39BB908C233B4F5B0038705F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BB908A233B4F5B0038705F /* LaunchScreen.storyboard */; };
 		39BB9096233B6C650038705F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB9095233B6C640038705F /* AVFoundation.framework */; };
 		39BB9098233B6C6A0038705F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB9097233B6C6A0038705F /* UIKit.framework */; };
 		39BB909A233B6C770038705F /* libHeartRateKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB9099233B6C770038705F /* libHeartRateKit.a */; };
+		39BB909D233B6F4D0038705F /* UserInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39BB909C233B6F4D0038705F /* UserInformation.plist */; };
+		39BB909F233B71C50038705F /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB909E233B71C50038705F /* SetupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		39BB907C233B4F5A0038705F /* CalorieBurnout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieBurnout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BB907F233B4F5A0038705F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39BB9081233B4F5A0038705F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		39BB9083233B4F5A0038705F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		39BB9083233B4F5A0038705F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		39BB9086233B4F5A0038705F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39BB9088233B4F5B0038705F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39BB908B233B4F5B0038705F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +30,8 @@
 		39BB9095233B6C640038705F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		39BB9097233B6C6A0038705F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		39BB9099233B6C770038705F /* libHeartRateKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHeartRateKit.a; path = CalorieBurnout/libHeartRateKit.a; sourceTree = "<group>"; };
+		39BB909C233B6F4D0038705F /* UserInformation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserInformation.plist; sourceTree = "<group>"; };
+		39BB909E233B71C50038705F /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +68,11 @@
 		39BB907E233B4F5A0038705F /* CalorieBurnout */ = {
 			isa = PBXGroup;
 			children = (
+				39BB90A0233B71CB0038705F /* ViewControllers */,
+				39BB90A2233B71F30038705F /* User Interfaces */,
+				39BB909B233B6F140038705F /* Database */,
+				39BB90A1233B71E60038705F /* Support Files */,
 				39BB907F233B4F5A0038705F /* AppDelegate.swift */,
-				39BB9081233B4F5A0038705F /* SceneDelegate.swift */,
-				39BB9083233B4F5A0038705F /* ViewController.swift */,
-				39BB9085233B4F5A0038705F /* Main.storyboard */,
-				39BB9088233B4F5B0038705F /* Assets.xcassets */,
-				39BB908A233B4F5B0038705F /* LaunchScreen.storyboard */,
-				39BB908D233B4F5B0038705F /* Info.plist */,
 			);
 			path = CalorieBurnout;
 			sourceTree = "<group>";
@@ -85,6 +85,41 @@
 				39BB9095233B6C640038705F /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39BB909B233B6F140038705F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				39BB909C233B6F4D0038705F /* UserInformation.plist */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		39BB90A0233B71CB0038705F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				39BB9083233B4F5A0038705F /* HomeViewController.swift */,
+				39BB909E233B71C50038705F /* SetupViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		39BB90A1233B71E60038705F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				39BB9088233B4F5B0038705F /* Assets.xcassets */,
+				39BB908D233B4F5B0038705F /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		39BB90A2233B71F30038705F /* User Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				39BB9085233B4F5A0038705F /* Main.storyboard */,
+				39BB908A233B4F5B0038705F /* LaunchScreen.storyboard */,
+			);
+			path = "User Interfaces";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BB909D233B6F4D0038705F /* UserInformation.plist in Resources */,
 				39BB908C233B4F5B0038705F /* LaunchScreen.storyboard in Resources */,
 				39BB9089233B4F5B0038705F /* Assets.xcassets in Resources */,
 				39BB9087233B4F5A0038705F /* Main.storyboard in Resources */,
@@ -158,9 +194,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39BB9084233B4F5A0038705F /* ViewController.swift in Sources */,
+				39BB9084233B4F5A0038705F /* HomeViewController.swift in Sources */,
+				39BB909F233B71C50038705F /* SetupViewController.swift in Sources */,
 				39BB9080233B4F5A0038705F /* AppDelegate.swift in Sources */,
-				39BB9082233B4F5A0038705F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +342,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8RYTVQ4BP;
-				INFOPLIST_FILE = CalorieBurnout/Info.plist;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/CalorieBurnout/\"/**";
+				INFOPLIST_FILE = "CalorieBurnout/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -329,7 +366,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8RYTVQ4BP;
-				INFOPLIST_FILE = CalorieBurnout/Info.plist;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/CalorieBurnout/\"/**";
+				INFOPLIST_FILE = "CalorieBurnout/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

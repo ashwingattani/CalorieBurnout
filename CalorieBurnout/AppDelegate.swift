@@ -10,28 +10,37 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow? = nil
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        var propertyListFormat =  PropertyListSerialization.PropertyListFormat.xml
+        var userInfoPlist: [String: AnyObject] = [:]
+        let plistPath: String? = Bundle.main.path(forResource: "UserInformation", ofType: "plist")!
+        let plistXML = FileManager.default.contents(atPath: plistPath!)!
+        do {
+            userInfoPlist = try PropertyListSerialization.propertyList(from: plistXML, options: .mutableContainersAndLeaves, format: &propertyListFormat) as! [String:AnyObject]
+
+        } catch {
+            print("Error reading plist: \(error), format: \(propertyListFormat)")
+        }
+        
+        if false { //if let isUserInfoAvailable = userInfoPlist["ValidInformation"] as? Bool, isUserInfoAvailable {
+//            let homeController = HomeViewController.init()
+            let homeController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            application.keyWindow?.rootViewController = homeController
+        } else {
+//            let setupController = SetupViewController.init()
+            let setupController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetupViewController") as! SetupViewController
+            self.window?.rootViewController = setupController
+        }
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
 
 }
 
