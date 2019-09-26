@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		394E1BD1233CBDF500279B8D /* UserInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 394E1BD0233CBDF500279B8D /* UserInformation.plist */; };
 		39BB9080233B4F5A0038705F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB907F233B4F5A0038705F /* AppDelegate.swift */; };
 		39BB9084233B4F5A0038705F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB9083233B4F5A0038705F /* HomeViewController.swift */; };
 		39BB9087233B4F5A0038705F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BB9085233B4F5A0038705F /* Main.storyboard */; };
@@ -15,11 +16,13 @@
 		39BB9096233B6C650038705F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB9095233B6C640038705F /* AVFoundation.framework */; };
 		39BB9098233B6C6A0038705F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB9097233B6C6A0038705F /* UIKit.framework */; };
 		39BB909A233B6C770038705F /* libHeartRateKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB9099233B6C770038705F /* libHeartRateKit.a */; };
-		39BB909D233B6F4D0038705F /* UserInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39BB909C233B6F4D0038705F /* UserInformation.plist */; };
 		39BB909F233B71C50038705F /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB909E233B71C50038705F /* SetupViewController.swift */; };
+		39F6AD22233CA1E00086A75E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6AD21233CA1E00086A75E /* Utility.swift */; };
+		39F6AD24233CA6210086A75E /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6AD23233CA6210086A75E /* UserInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		394E1BD0233CBDF500279B8D /* UserInformation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserInformation.plist; sourceTree = "<group>"; };
 		39BB907C233B4F5A0038705F /* CalorieBurnout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieBurnout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BB907F233B4F5A0038705F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39BB9083233B4F5A0038705F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -30,8 +33,9 @@
 		39BB9095233B6C640038705F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		39BB9097233B6C6A0038705F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		39BB9099233B6C770038705F /* libHeartRateKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHeartRateKit.a; path = CalorieBurnout/libHeartRateKit.a; sourceTree = "<group>"; };
-		39BB909C233B6F4D0038705F /* UserInformation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserInformation.plist; sourceTree = "<group>"; };
 		39BB909E233B71C50038705F /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		39F6AD21233CA1E00086A75E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		39F6AD23233CA6210086A75E /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		39BB907E233B4F5A0038705F /* CalorieBurnout */ = {
 			isa = PBXGroup;
 			children = (
+				39F6AD20233CA1CA0086A75E /* Helper */,
 				39BB90A0233B71CB0038705F /* ViewControllers */,
 				39BB90A2233B71F30038705F /* User Interfaces */,
 				39BB909B233B6F140038705F /* Database */,
@@ -90,7 +95,8 @@
 		39BB909B233B6F140038705F /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				39BB909C233B6F4D0038705F /* UserInformation.plist */,
+				394E1BD0233CBDF500279B8D /* UserInformation.plist */,
+				39F6AD23233CA6210086A75E /* UserInformation.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -120,6 +126,14 @@
 				39BB908A233B4F5B0038705F /* LaunchScreen.storyboard */,
 			);
 			path = "User Interfaces";
+			sourceTree = "<group>";
+		};
+		39F6AD20233CA1CA0086A75E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				39F6AD21233CA1E00086A75E /* Utility.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39BB909D233B6F4D0038705F /* UserInformation.plist in Resources */,
+				394E1BD1233CBDF500279B8D /* UserInformation.plist in Resources */,
 				39BB908C233B4F5B0038705F /* LaunchScreen.storyboard in Resources */,
 				39BB9089233B4F5B0038705F /* Assets.xcassets in Resources */,
 				39BB9087233B4F5A0038705F /* Main.storyboard in Resources */,
@@ -194,6 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F6AD24233CA6210086A75E /* UserInformation.swift in Sources */,
+				39F6AD22233CA1E00086A75E /* Utility.swift in Sources */,
 				39BB9084233B4F5A0038705F /* HomeViewController.swift in Sources */,
 				39BB909F233B71C50038705F /* SetupViewController.swift in Sources */,
 				39BB9080233B4F5A0038705F /* AppDelegate.swift in Sources */,

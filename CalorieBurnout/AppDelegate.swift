@@ -18,23 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        var propertyListFormat =  PropertyListSerialization.PropertyListFormat.xml
-        var userInfoPlist: [String: AnyObject] = [:]
-        let plistPath: String? = Bundle.main.path(forResource: "UserInformation", ofType: "plist")!
-        let plistXML = FileManager.default.contents(atPath: plistPath!)!
-        do {
-            userInfoPlist = try PropertyListSerialization.propertyList(from: plistXML, options: .mutableContainersAndLeaves, format: &propertyListFormat) as! [String:AnyObject]
-
-        } catch {
-            print("Error reading plist: \(error), format: \(propertyListFormat)")
-        }
-        
-        if false { //if let isUserInfoAvailable = userInfoPlist["ValidInformation"] as? Bool, isUserInfoAvailable {
-//            let homeController = HomeViewController.init()
+        if let userInfo = UserInformation.fetchUserInformationPlist(), userInfo.validInformation {
             let homeController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            application.keyWindow?.rootViewController = homeController
+            self.window?.rootViewController = homeController
         } else {
-//            let setupController = SetupViewController.init()
+            UserInformation.init([:]).updateUserInformationPlist()
             let setupController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetupViewController") as! SetupViewController
             self.window?.rootViewController = setupController
         }

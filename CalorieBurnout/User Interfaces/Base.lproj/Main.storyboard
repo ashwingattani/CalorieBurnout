@@ -90,7 +90,7 @@
                                             <constraint firstAttribute="width" constant="70" id="Axy-vb-G91"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -149,7 +149,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtZ-Wq-FDB">
                                         <rect key="frame" x="111" y="0.0" width="138" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -171,7 +171,7 @@
                                 </constraints>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="saveUserInformation" destination="G8W-28-6vo" eventType="touchUpInside" id="iuw-Db-zvf"/>
+                                    <action selector="saveUserInformationWithSender:" destination="G8W-28-6vo" eventType="touchUpInside" id="mTb-Is-OtW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -198,6 +198,7 @@
                     </view>
                     <connections>
                         <outlet property="ageTextField" destination="P5G-yk-m9G" id="Ecx-2y-9HJ"/>
+                        <outlet property="genderPicker" destination="WHb-jQ-4Dz" id="Qrm-nW-bdB"/>
                         <outlet property="nameTextField" destination="dnh-ke-JyG" id="coF-6T-FOA"/>
                         <outlet property="weightTextField" destination="mtZ-Wq-FDB" id="ALA-z9-BMV"/>
                     </connections>
