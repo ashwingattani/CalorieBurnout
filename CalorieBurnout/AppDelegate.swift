@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let homeController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             self.window?.rootViewController = homeController
         } else {
-            UserInformation.init([:]).updateUserInformationPlist()
             let setupController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetupViewController") as! SetupViewController
             self.window?.rootViewController = setupController
         }

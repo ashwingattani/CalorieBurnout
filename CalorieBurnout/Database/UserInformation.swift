@@ -24,10 +24,22 @@ struct UserInformation: Codable {
     }
     
     static func fetchUserInformationPlist() -> UserInformation? {
-        
+        if let userInfoData = UserDefaults.standard.object(forKey: "UserInformation") as? Data {
+            let decoder = JSONDecoder()
+            if let userInformation = try? decoder.decode(UserInformation.self, from: userInfoData) {
+                return userInformation
+            }
+            return nil
+        }
+        return nil
     }
     
     func updateUserInformationPlist() -> Bool {
-        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(self) {
+            UserDefaults.standard.set(encoded, forKey: "UserInformation")
+            return true
+        }
+        return false
     }
 }
