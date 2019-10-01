@@ -9,12 +9,17 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var heartBeatLabel: UILabel!
+    @IBOutlet weak var calorieCountLabel: UILabel!
+    @IBOutlet weak var waitingMessageLabel: UILabel!
+    
+    static let identifier = "HomeViewController"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
-
-
 }
 

@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         if let userInfo = UserInformation.fetchUserInformationPlist(), userInfo.validInformation {
-            let homeController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let homeController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: HomeViewController.identifier) as! HomeViewController
             self.window?.rootViewController = homeController
         } else {
-            let setupController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SetupViewController") as! SetupViewController
+            let setupController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SetupViewController.identifier) as! SetupViewController
             self.window?.rootViewController = setupController
         }
         

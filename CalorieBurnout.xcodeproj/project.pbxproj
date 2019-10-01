@@ -23,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		394E1BD0233CBDF500279B8D /* UserInformation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserInformation.plist; sourceTree = "<group>"; };
+		39BA6314233E34170080C8E9 /* CalorieBurnout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalorieBurnout-Bridging-Header.h"; sourceTree = "<group>"; };
 		39BB907C233B4F5A0038705F /* CalorieBurnout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieBurnout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BB907F233B4F5A0038705F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39BB9083233B4F5A0038705F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				39F6AD21233CA1E00086A75E /* Utility.swift */,
+				39BA6314233E34170080C8E9 /* CalorieBurnout-Bridging-Header.h */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -358,7 +360,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8RYTVQ4BP;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/CalorieBurnout/\"/**";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/CalorieBurnout\"/**",
+					"\"$(SRCROOT)\"/**",
+				);
 				INFOPLIST_FILE = "CalorieBurnout/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -369,8 +374,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CalorieBurnout",
 				);
+				OTHER_LDFLAGS = (
+					"-lHeartRateKit",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.protons.CalorieBurnout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CalorieBurnout/Helper/CalorieBurnout-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,7 +392,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8RYTVQ4BP;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/CalorieBurnout/\"/**";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/CalorieBurnout\"/**",
+					"\"$(SRCROOT)\"/**",
+				);
 				INFOPLIST_FILE = "CalorieBurnout/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -393,8 +406,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CalorieBurnout",
 				);
+				OTHER_LDFLAGS = (
+					"-lHeartRateKit",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.protons.CalorieBurnout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CalorieBurnout/Helper/CalorieBurnout-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

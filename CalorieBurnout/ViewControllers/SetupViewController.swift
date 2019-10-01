@@ -18,11 +18,18 @@ class SetupViewController: UIViewController {
     
     private var selectedGender = ""
     
+    static let identifier = "SetupViewController"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.genderPicker.delegate = self
         self.genderPicker.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.genderPicker.selectRow(0, inComponent: 0, animated: true)
     }
     
     @IBAction func saveUserInformation(sender: Any) {
@@ -60,7 +67,7 @@ class SetupViewController: UIViewController {
     }
     
     func showErrorPopup() {
-        let alertController = UIAlertController.init(title: "Alert", message: "All fields are mendatory", preferredStyle: .alert)
+        let alertController = UIAlertController.init(title: "Alert", message: "All fields are mandatory", preferredStyle: .alert)
         let defaultAction = UIAlertAction.init(title: "Ok", style: .destructive, handler: nil)
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
