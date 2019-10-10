@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,19 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzR-ax-O4s">
-                                <rect key="frame" x="74.5" y="218" width="226" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="226" id="j8e-bT-YcC"/>
-                                    <constraint firstAttribute="height" constant="49" id="wBK-bE-GT9"/>
-                                </constraints>
-                                <string key="text">Please keep finger on camera
-for heart beat detection</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufT-LJ-8Rn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufT-LJ-8Rn" userLabel="Detail View">
                                 <rect key="frame" x="74.5" y="282" width="226" height="103"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heart Beat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg8-Vj-3Ra">
@@ -68,6 +56,7 @@ for heart beat detection</string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="3ye-M7-n0j"/>
                                     <constraint firstItem="dnT-jr-WEv" firstAttribute="top" secondItem="ufT-LJ-8Rn" secondAttribute="top" constant="20" id="AYs-yk-RMZ"/>
                                     <constraint firstAttribute="height" constant="103" id="Hfm-Hj-m2b"/>
                                     <constraint firstItem="tg8-Vj-3Ra" firstAttribute="leading" secondItem="ufT-LJ-8Rn" secondAttribute="leading" id="JTa-gy-7EJ"/>
@@ -80,7 +69,7 @@ for heart beat detection</string>
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for BPM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEi-jz-f9x">
-                                <rect key="frame" x="126" y="269" width="123" height="21"/>
+                                <rect key="frame" x="126" y="251" width="123" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="fwH-F9-7e4"/>
                                 </constraints>
@@ -88,17 +77,26 @@ for heart beat detection</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWN-r6-Ruh">
+                                <rect key="frame" x="117.5" y="213" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="ZUv-Jo-L20"/>
+                                    <constraint firstAttribute="height" constant="30" id="fVd-Kg-fd8"/>
+                                </constraints>
+                                <state key="normal" title="Press to detect BPM"/>
+                                <connections>
+                                    <action selector="detectBPM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fac-54-jyV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ufT-LJ-8Rn" firstAttribute="top" secondItem="EzR-ax-O4s" secondAttribute="bottom" constant="15" id="4so-6c-q8e"/>
+                            <constraint firstItem="mEi-jz-f9x" firstAttribute="top" secondItem="jWN-r6-Ruh" secondAttribute="bottom" constant="8" id="36l-LI-jtz"/>
                             <constraint firstItem="ufT-LJ-8Rn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="74q-uP-ckR"/>
-                            <constraint firstItem="ufT-LJ-8Rn" firstAttribute="trailing" secondItem="EzR-ax-O4s" secondAttribute="trailing" id="7hX-5B-iXJ"/>
+                            <constraint firstItem="ufT-LJ-8Rn" firstAttribute="top" secondItem="mEi-jz-f9x" secondAttribute="bottom" constant="10" id="Fdg-yd-afT"/>
                             <constraint firstItem="ufT-LJ-8Rn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FgE-fA-dEF"/>
-                            <constraint firstItem="EzR-ax-O4s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nkn-f0-bz6"/>
                             <constraint firstItem="mEi-jz-f9x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bBA-87-CGp"/>
-                            <constraint firstItem="ufT-LJ-8Rn" firstAttribute="leading" secondItem="EzR-ax-O4s" secondAttribute="leading" id="fcI-EA-zWq"/>
-                            <constraint firstItem="mEi-jz-f9x" firstAttribute="top" secondItem="EzR-ax-O4s" secondAttribute="bottom" constant="2" id="yy3-Ef-ezX"/>
+                            <constraint firstItem="jWN-r6-Ruh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oYX-5B-lNw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -151,7 +149,7 @@ for heart beat detection</string>
                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad" textContentType="name"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="BjT-Ln-tEI" secondAttribute="bottom" constant="7" id="AjU-OR-IWt"/>
                                     <constraint firstAttribute="bottom" secondItem="dnh-ke-JyG" secondAttribute="bottom" id="Ewq-NR-pzj"/>
@@ -182,7 +180,7 @@ for heart beat detection</string>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="P5G-yk-m9G" secondAttribute="trailing" id="5MB-mX-y2S"/>
                                     <constraint firstAttribute="bottom" secondItem="0N7-Rs-moL" secondAttribute="bottom" constant="7" id="GqO-hE-LjT"/>
@@ -212,7 +210,7 @@ for heart beat detection</string>
                                         </constraints>
                                     </pickerView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="WHb-jQ-4Dz" firstAttribute="top" secondItem="kXo-RB-wvh" secondAttribute="top" id="6xv-Qv-Mr5"/>
                                     <constraint firstAttribute="bottom" secondItem="WHb-jQ-4Dz" secondAttribute="bottom" id="9zX-nH-Cgk"/>
@@ -241,7 +239,7 @@ for heart beat detection</string>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="mtZ-Wq-FDB" firstAttribute="top" secondItem="Whv-6s-WQ0" secondAttribute="top" id="FRb-uw-zwQ"/>
                                     <constraint firstItem="Axi-7E-PCj" firstAttribute="top" secondItem="Whv-6s-WQ0" secondAttribute="top" constant="6" id="MEn-53-kGN"/>

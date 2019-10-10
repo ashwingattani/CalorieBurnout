@@ -18,8 +18,29 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+            
+    }
+    
+    @IBAction func detectBPM(_ sender: Any) {
+        let hrk = HeartRateKitController.init()
+        hrk.delegate = self
+        self.present(hrk, animated: true, completion: nil)
+    }
+}
+
+extension HomeViewController: HeartRateKitControllerDelegate {
+    func heartRateKitController(_ controller: HeartRateKitController, didFinishWith result: HeartRateKitResult) {
+        self.dismiss(animated: true) {
+            self.heartBeatLabel.text = String(format: "%.2f", result.bpm)
+        }
         
-        // Do any additional setup after loading the view.
+    }
+    
+    func heartRateKitControllerDidCancel(_ controller: HeartRateKitController) {
+        self.dismiss(animated: true) {
+            self.heartBeatLabel.text = "__.__"
+            self.calorieCountLabel.text = "__.__"
+        }
     }
 }
 

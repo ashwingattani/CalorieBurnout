@@ -8,21 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		394E1BD1233CBDF500279B8D /* UserInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 394E1BD0233CBDF500279B8D /* UserInformation.plist */; };
+		39B35532234F1BED000B416D /* libHeartRateKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B35531234F1BCD000B416D /* libHeartRateKit.a */; };
 		39BB9080233B4F5A0038705F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB907F233B4F5A0038705F /* AppDelegate.swift */; };
 		39BB9084233B4F5A0038705F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB9083233B4F5A0038705F /* HomeViewController.swift */; };
 		39BB9087233B4F5A0038705F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BB9085233B4F5A0038705F /* Main.storyboard */; };
 		39BB9089233B4F5B0038705F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39BB9088233B4F5B0038705F /* Assets.xcassets */; };
 		39BB908C233B4F5B0038705F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BB908A233B4F5B0038705F /* LaunchScreen.storyboard */; };
-		39BB9096233B6C650038705F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB9095233B6C640038705F /* AVFoundation.framework */; };
-		39BB9098233B6C6A0038705F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB9097233B6C6A0038705F /* UIKit.framework */; };
-		39BB909A233B6C770038705F /* libHeartRateKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB9099233B6C770038705F /* libHeartRateKit.a */; };
 		39BB909F233B71C50038705F /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB909E233B71C50038705F /* SetupViewController.swift */; };
 		39F6AD22233CA1E00086A75E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6AD21233CA1E00086A75E /* Utility.swift */; };
 		39F6AD24233CA6210086A75E /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F6AD23233CA6210086A75E /* UserInformation.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		39B35530234F1BCD000B416D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39B3552C234F1BCD000B416D /* HeartRateKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5C78DF751DFB0F5E00B15AD8;
+			remoteInfo = HeartRateKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		39B35524234F1A77000B416D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		394E1BD0233CBDF500279B8D /* UserInformation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserInformation.plist; sourceTree = "<group>"; };
+		39B3552C234F1BCD000B416D /* HeartRateKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HeartRateKit.xcodeproj; path = HeartRateKit/HeartRateKit.xcodeproj; sourceTree = "<group>"; };
 		39BA6314233E34170080C8E9 /* CalorieBurnout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalorieBurnout-Bridging-Header.h"; sourceTree = "<group>"; };
 		39BB907C233B4F5A0038705F /* CalorieBurnout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieBurnout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BB907F233B4F5A0038705F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +55,6 @@
 		39BB908D233B4F5B0038705F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39BB9095233B6C640038705F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		39BB9097233B6C6A0038705F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		39BB9099233B6C770038705F /* libHeartRateKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHeartRateKit.a; path = CalorieBurnout/libHeartRateKit.a; sourceTree = "<group>"; };
 		39BB909E233B71C50038705F /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		39F6AD21233CA1E00086A75E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		39F6AD23233CA6210086A75E /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
@@ -44,18 +65,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39BB9098233B6C6A0038705F /* UIKit.framework in Frameworks */,
-				39BB909A233B6C770038705F /* libHeartRateKit.a in Frameworks */,
-				39BB9096233B6C650038705F /* AVFoundation.framework in Frameworks */,
+				39B35532234F1BED000B416D /* libHeartRateKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39B3552D234F1BCD000B416D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39B35531234F1BCD000B416D /* libHeartRateKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		39BB9073233B4F5A0038705F = {
 			isa = PBXGroup;
 			children = (
+				39B3552C234F1BCD000B416D /* HeartRateKit.xcodeproj */,
 				39BB907E233B4F5A0038705F /* CalorieBurnout */,
 				39BB9094233B6C640038705F /* Frameworks */,
 				39BB907D233B4F5A0038705F /* Products */,
@@ -86,7 +114,6 @@
 		39BB9094233B6C640038705F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39BB9099233B6C770038705F /* libHeartRateKit.a */,
 				39BB9097233B6C6A0038705F /* UIKit.framework */,
 				39BB9095233B6C640038705F /* AVFoundation.framework */,
 			);
@@ -148,6 +175,7 @@
 				39BB9078233B4F5A0038705F /* Sources */,
 				39BB9079233B4F5A0038705F /* Frameworks */,
 				39BB907A233B4F5A0038705F /* Resources */,
+				39B35524234F1A77000B416D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,12 +212,28 @@
 			mainGroup = 39BB9073233B4F5A0038705F;
 			productRefGroup = 39BB907D233B4F5A0038705F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 39B3552D234F1BCD000B416D /* Products */;
+					ProjectRef = 39B3552C234F1BCD000B416D /* HeartRateKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				39BB907B233B4F5A0038705F /* CalorieBurnout */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		39B35531234F1BCD000B416D /* libHeartRateKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libHeartRateKit.a;
+			remoteRef = 39B35530234F1BCD000B416D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		39BB907A233B4F5A0038705F /* Resources */ = {
@@ -276,6 +320,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/CalorieBurnout/HeartRateKit.framework\"";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -336,6 +381,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/CalorieBurnout/HeartRateKit.framework\"";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -360,23 +406,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8RYTVQ4BP;
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/CalorieBurnout\"/**",
-					"\"$(SRCROOT)\"/**",
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/CalorieBurnout/**",
+					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/**";
 				INFOPLIST_FILE = "CalorieBurnout/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CalorieBurnout",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)/**";
 				OTHER_LDFLAGS = (
-					"-lHeartRateKit",
 					"-ObjC",
+					"-lstdc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.protons.CalorieBurnout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,23 +436,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8RYTVQ4BP;
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/CalorieBurnout\"/**",
-					"\"$(SRCROOT)\"/**",
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/CalorieBurnout/**",
+					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/**";
 				INFOPLIST_FILE = "CalorieBurnout/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CalorieBurnout",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)/**";
 				OTHER_LDFLAGS = (
-					"-lHeartRateKit",
 					"-ObjC",
+					"-lstdc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.protons.CalorieBurnout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
