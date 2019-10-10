@@ -60,7 +60,7 @@ class SetupViewController: UIViewController {
         userInfo["Gender"] = selectedGender
         userInfo["Weight"] = weight
         
-        let _ = UserInformation.init(userInfo).updateUserInformationPlist()
+        let _ = UserInformation.init(userInfo).updateUserInformation()
         
         let homeController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         self.present(homeController, animated: true, completion: nil)

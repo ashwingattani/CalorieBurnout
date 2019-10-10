@@ -23,7 +23,7 @@ struct UserInformation: Codable {
         self.weight = userInfo["Weight"] as? String ?? ""
     }
     
-    static func fetchUserInformationPlist() -> UserInformation? {
+    static func fetchUserInformation() -> UserInformation? {
         if let userInfoData = UserDefaults.standard.object(forKey: "UserInformation") as? Data {
             let decoder = JSONDecoder()
             if let userInformation = try? decoder.decode(UserInformation.self, from: userInfoData) {
@@ -34,12 +34,22 @@ struct UserInformation: Codable {
         return nil
     }
     
-    func updateUserInformationPlist() -> Bool {
+    func updateUserInformation() -> Bool {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(self) {
             UserDefaults.standard.set(encoded, forKey: "UserInformation")
             return true
         }
         return false
+    }
+    
+    func getConstantsForCalorieCalculation() -> (age: CGFloat, weight: CGFloat, heartRate: CGFloat, constant: CGFloat) {
+        switch self.gender {
+        case "Male":
+            return (0.2017, 0.09036, 0.6309, 55.0969)
+        case "Female":
+            return (0.074, 0.05741, 0.4472, 20.4022)
+        default: return (0, 0, 0, 0)
+        }
     }
 }

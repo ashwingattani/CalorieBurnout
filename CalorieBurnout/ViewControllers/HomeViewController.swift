@@ -26,6 +26,11 @@ class HomeViewController: UIViewController {
         hrk.delegate = self
         self.present(hrk, animated: true, completion: nil)
     }
+    
+    func calculateCalorieBurnout(heartRate: CGFloat) {
+        let userInfo = UserInformation.fetchUserInformation()
+        self.calorieCountLabel.text = ""
+    }
 }
 
 extension HomeViewController: HeartRateKitControllerDelegate {
