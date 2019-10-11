@@ -14,6 +14,7 @@ struct UserInformation: Codable {
     var age: String
     var gender: String
     var weight: String
+    var restingBPM: CGFloat
     
     init(_ userInfo: [String: Any]) {
         self.validInformation = userInfo["ValidInformation"] as? Bool ?? false
@@ -21,6 +22,7 @@ struct UserInformation: Codable {
         self.age = userInfo["Age"] as? String ?? ""
         self.gender = userInfo["Gender"] as? String ?? ""
         self.weight = userInfo["Weight"] as? String ?? ""
+        self.restingBPM = userInfo["BPM"] as? CGFloat ?? 0
     }
     
     static func fetchUserInformation() -> UserInformation? {
@@ -46,9 +48,9 @@ struct UserInformation: Codable {
     func getConstantsForCalorieCalculation() -> (age: CGFloat, weight: CGFloat, heartRate: CGFloat, constant: CGFloat) {
         switch self.gender {
         case "Male":
-            return (0.2017, 0.09036, 0.6309, 55.0969)
+            return (0.2017, 0.1988, 0.6309, 55.0969)
         case "Female":
-            return (0.074, 0.05741, 0.4472, 20.4022)
+            return (0.074, 0.1988, 0.4472, 20.4022)
         default: return (0, 0, 0, 0)
         }
     }

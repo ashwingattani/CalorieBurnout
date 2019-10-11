@@ -193,7 +193,15 @@ static const CGFloat HRKLabelToLabelTopPadding = 8.0;
     
     [self.session addOutput:self.frameOutput];
     
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    if (@available(iOS 13.0, *)) {
+        UIImageView *imgView = [[UIImageView alloc] initWithImage: [UIImage systemImageNamed:@"waveform.path.ecg"]];
+        imgView.frame = CGRectMake(0, 0, 30, 40);
+        imgView.center = self.view.center;
+        [self.view addSubview:imgView];
+    } else {
+        // Fallback on earlier versions
+    }
     
     self.statusLabel = [[UILabel alloc] init];
     self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -201,10 +209,10 @@ static const CGFloat HRKLabelToLabelTopPadding = 8.0;
     [self.statusLabel setTextAlignment:NSTextAlignmentLeft];
     [self.statusLabel setTextColor:[UIColor whiteColor]];
     self.statusLabel.font = [UIFont systemFontOfSize:HRKLabelFontSize];
-    [self.view addSubview:self.statusLabel];
+//    [self.view addSubview:self.statusLabel];
     
-    [self.view hrkPinAttribute:NSLayoutAttributeCenterX toAttribute:NSLayoutAttributeCenterX ofItem:self.statusLabel];
-    [self.view hrkPinAttribute:NSLayoutAttributeCenterY toAttribute:NSLayoutAttributeCenterY ofItem:self.statusLabel];
+//    [self.view hrkPinAttribute:NSLayoutAttributeCenterX toAttribute:NSLayoutAttributeCenterX ofItem:self.statusLabel];
+//    [self.view hrkPinAttribute:NSLayoutAttributeCenterY toAttribute:NSLayoutAttributeCenterY ofItem:self.statusLabel];
     
     self.bpmLabel = [[UILabel alloc] init];
     self.bpmLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -212,9 +220,9 @@ static const CGFloat HRKLabelToLabelTopPadding = 8.0;
     [self.bpmLabel setTextAlignment:NSTextAlignmentLeft];
     [self.bpmLabel setTextColor:[UIColor whiteColor]];
     self.bpmLabel.font = [UIFont systemFontOfSize:HRKLabelFontSize];
-    [self.view addSubview:self.bpmLabel];
-    [self.view hrkPinAttribute:NSLayoutAttributeCenterX toAttribute:NSLayoutAttributeCenterX ofItem:self.bpmLabel];
-    [self.bpmLabel hrkPinAttribute:NSLayoutAttributeTop toAttribute:NSLayoutAttributeBottom ofItem:self.statusLabel withConstant:HRKLabelToLabelTopPadding];
+//    [self.view addSubview:self.bpmLabel];
+//    [self.view hrkPinAttribute:NSLayoutAttributeCenterX toAttribute:NSLayoutAttributeCenterX ofItem:self.bpmLabel];
+//    [self.bpmLabel hrkPinAttribute:NSLayoutAttributeTop toAttribute:NSLayoutAttributeBottom ofItem:self.statusLabel withConstant:HRKLabelToLabelTopPadding];
     
     self.cancelButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [self.cancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -223,10 +231,10 @@ static const CGFloat HRKLabelToLabelTopPadding = 8.0;
     self.cancelButton.translatesAutoresizingMaskIntoConstraints = NO;
     self.cancelButton.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.cancelButton addTarget:self action:@selector(cancelButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.cancelButton];
+//    [self.view addSubview:self.cancelButton];
     
-    [self.view hrkPinAttribute:NSLayoutAttributeTop toAttribute:NSLayoutAttributeTop ofItem:self.cancelButton withConstant:-HRKTopButtonsVerticalPadding];
-    [self.view hrkPinAttribute:NSLayoutAttributeLeft toAttribute:NSLayoutAttributeLeft ofItem:self.cancelButton withConstant:-HRKTopButtonsVerticalPadding];
+//    [self.view hrkPinAttribute:NSLayoutAttributeTop toAttribute:NSLayoutAttributeTop ofItem:self.cancelButton withConstant:-HRKTopButtonsVerticalPadding];
+//    [self.view hrkPinAttribute:NSLayoutAttributeLeft toAttribute:NSLayoutAttributeLeft ofItem:self.cancelButton withConstant:-HRKTopButtonsVerticalPadding];
     
 }
 

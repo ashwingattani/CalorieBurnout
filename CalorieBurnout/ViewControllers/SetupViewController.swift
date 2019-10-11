@@ -15,6 +15,9 @@ class SetupViewController: UIViewController {
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var genderPicker: UIPickerView!
+    @IBOutlet weak var heartbeatImage: UIImageView!
+    @IBOutlet weak var restingBPM: UILabel!
+    @IBOutlet weak var submitButton: UIButton!
     
     private var selectedGender = ""
     
@@ -25,11 +28,19 @@ class SetupViewController: UIViewController {
 
         self.genderPicker.delegate = self
         self.genderPicker.dataSource = self
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(dismissKeyboard)))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.genderPicker.selectRow(0, inComponent: 0, animated: true)
+    }
+    
+    @IBAction func detectBPM(_ sender: Any) {
+        let hrk = HeartRateKitController.init()
+        hrk.delegate = self
+        self.present(hrk, animated: true, completion: nil)
     }
     
     @IBAction func saveUserInformation(sender: Any) {
@@ -72,6 +83,10 @@ class SetupViewController: UIViewController {
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
 
 }
 
@@ -91,5 +106,14 @@ extension SetupViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.selectedGender = row == 0 ? "Male" : "Female"
+    }
+}
+
+extension SetupViewController: HeartRateKitControllerDelegate {
+    func heartRateKitController(_ controller: HeartRateKitController, didFinishWith result: HeartRateKitResult) {
+        self.dismiss(animated: true) {
+            self.restingBPM.text = String(format: "%.2f", result.bpm)
+        }
+        
     }
 }
